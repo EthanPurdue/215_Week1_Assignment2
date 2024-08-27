@@ -1,0 +1,35 @@
+<!--At first I was having some trouble with ensuring my calculations came back correct.
+I used the console to match up the right answer before hand. I now feel comfortabble using it and will
+use it more in the future -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //could not make constant a float because cannot assign constant new value, but had no issues regardless
+      const tax = 0.07;
+
+      //The Tip amount is another constant
+      const tip = 0.15;
+
+      //Want to make sure that the amount entered is set as a number
+      let billAmount = prompt("Pleaes enter the bill amount here: ");
+      billAmount = parseFloat(billAmount);
+
+      //Now we are working with entirely numbers which we know from hovering over variables, so no need to parse
+      let mealTaxTotal = billAmount + billAmount * tax;
+      let mealTipTotal = mealTaxTotal + mealTaxTotal * tip;
+      //alert will include the combined total for bill, 7% tax, and 15% tip
+      alert(mealTipTotal);
+
+      console.info(
+        mealTipTotal + "     If you put in 50 the result should be approx 61.5"
+      );
+    </script>
+  </body>
+</html>
